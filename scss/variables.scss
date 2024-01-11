@@ -1,0 +1,65 @@
+:root {
+  // text
+  --h1-size: 2.25rem;
+  --h1-line: 2.75rem;
+
+  --h2-size: 2rem;
+  --h2-line: 2.5rem;
+
+  --h3-size: 1.5rem;
+  --h3-line: 2rem;
+
+  --h4-size: 1.25rem;
+  --h4-line: 1.5rem;
+
+  --h5-size: 1rem;
+  --h5-line: 1.25rem;
+
+  --h6-size: 1rem;
+  --h6-line: 1.25rem;
+
+  --weight-bold: 700;
+  --weight-medium: 500;
+
+  @media only screen and (min-width: 1024px) {
+    --h1-size: 3.5rem;
+    --h1-line: 4rem;
+
+    --h2-size: 2.5rem;
+    --h2-line: 3rem;
+
+    --h3-size: 2rem;
+    --h3-line: 2.5rem;
+
+    --h4-size: 1.5rem;
+    --h4-line: 2rem;
+
+    --h5-size: 1.25rem;
+    --h5-line: 1.5rem;
+
+    --h6-size: 1.125rem;
+    --h6-line: 1.5rem;
+  }
+
+  // colors
+  --primary-color: #00D146;
+  --bg-color: #1B1B1B;
+  --n800: #373737;
+  --n700: #424242;
+  --n600: #585858;
+  --n500: #757376;
+  --n400: #8C8A8D;
+  --n300: #A2A1A3;
+  --n200: #B8B7B9;
+  --n100: #D0D0D0;
+  --n50: #F9F9F9;
+  --color-white: #fff;
+
+  // button padding
+  --button: 0.5rem 1.25rem 0.75rem 1.25rem;
+  --icon: 0.75rem;
+
+  // transitions
+  --transition-fast: 150ms;
+  --transition-slow: 350ms;
+}

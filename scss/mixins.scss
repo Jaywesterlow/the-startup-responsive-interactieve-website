@@ -1,0 +1,121 @@
+@use './variables.scss' as *;
+
+// -----------------------------------------------------------------------------
+//
+// Typography
+//
+// -----------------------------------------------------------------------------
+
+@mixin font-primary-bold {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: var(--weight-bold);
+}
+
+@mixin font-primary-medium {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: var(--weight-medium);
+}
+
+@mixin font-secondary {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: var(--weight-medium);
+}
+
+@mixin h1-font {
+  @include font-primary-bold;
+  font-size: var(--h1-size);
+  line-height: var(--h1-line);
+  color: var(--color-white);
+  margin-bottom: 2rem;
+}
+
+@mixin h2-font {
+  @include font-primary-medium;
+  font-size: var(--h2-size);
+  line-height: var(--h2-line);
+  color: var(--color-white);
+  margin-bottom: 2rem;
+}
+
+@mixin h3-font {
+  @include font-primary-medium;
+  font-size: var(--h3-size);
+  line-height: var(--h3-line);
+  color: var(--color-white);
+  margin-bottom: 2rem;
+}
+
+@mixin h4-font {
+  @include font-primary-medium;
+  font-size: var(--h4-size);
+  line-height: var(--h4-line);
+  color: var(--color-white);
+  margin-bottom: 2rem;
+}
+
+@mixin h5-font {
+  @include font-primary-medium;
+  font-size: var(--h5-size);
+  line-height: var(--h5-line);
+  color: var(--color-white);
+  margin-bottom: 2rem;
+}
+
+@mixin h6-font {
+  @include font-primary-medium;
+  font-size: var(--h6-size);
+  line-height: var(--h6-line);
+  color: var(--color-white);
+  margin-bottom: 2rem;
+}
+
+@mixin p1-font {
+  @include font-secondary;
+  font-size: var(--p1-size);
+  line-height: var(--p1-line);
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+@mixin p2-font {
+  @include font-secondary;
+  font-size: var(--p2-size);
+  line-height: var(--p2-line);
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+// -----------------------------------------------------------------------------
+//
+// Buttons
+//
+// -----------------------------------------------------------------------------
+
+
+@mixin primary-button($padding) {
+  @include font-secondary;
+  padding: $padding;
+  display: inline-block;
+  color: var(--color-white);
+  border: 1px solid var(--n600);
+  border-radius: 24px;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+@mixin primary-button-hover {
+  border: 1px solid var(--primary-color);
+  transition: var(--transition-fast);
+}
+
+@mixin text-button {
+  @include font-secondary;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+@mixin text-button-hover {
+  color: var(--n100);
+  transition: var(--transition-fast);
+}
