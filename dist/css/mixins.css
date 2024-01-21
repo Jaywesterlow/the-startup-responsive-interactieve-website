@@ -11,8 +11,13 @@
   --h5-line: 1.25rem;
   --h6-size: 1rem;
   --h6-line: 1.25rem;
+  --p1-size: 1rem;
+  --p1-line: 1.5rem;
+  --p2-size: .875rem
+  --p2-line: 1.25rem
   --weight-bold: 700;
   --weight-medium: 500;
+  --weight-light: 300;
   --primary-color: #00D146;
   --bg-color: #1B1B1B;
   --n800: #373737;
@@ -25,8 +30,8 @@
   --n100: #D0D0D0;
   --n50: #F9F9F9;
   --color-white: #fff;
-  --button: 0.5rem 1.25rem 0.75rem 1.25rem;
-  --icon: 0.75rem;
+  --button: .5rem 1.25rem .75rem 1.25rem;
+  --icon: .75rem;
   --transition-fast: 150ms;
   --transition-slow: 350ms;
 }

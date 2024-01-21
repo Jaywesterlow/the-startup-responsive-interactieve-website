@@ -1,48 +1,72 @@
-@use 'mixins' as *;
-@use 'variables' as *;
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;700&family=Plus+Jakarta+Sans:wght@500&display=swap');
+@use "mixins" as *;
+@use "variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;700&family=Plus+Jakarta+Sans:wght@200;300;500&display=swap");
 
 *,
 *::before,
 *::after {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  & ::-webkit-scrollbar {
+    width: 0.35rem;
+  }
+
+  & ::-webkit-scrollbar-track {
+    background: var(--bg-color);
+  }
+
+  & ::-webkit-scrollbar-thumb {
+    background: var(--n300);
+    border-radius: 2rem;
+  }
+
+  & ::-webkit-scrollbar-thumb:active {
+    background: var(--n400);
+  }
 }
 
 h1 {
-    @include h1-font;
-  }
-  
-  h2 {
-    @include h2-font;
-  }
-  
-  h3 {
-    @include h3-font;
-  }
-  
-  h4 {
-    @include h4-font;
-  }
-  
-  h5 {
-    @include h5-font;
-  }
-  
-  h6 {
-    @include h6-font;
-  }
-  
-  p {
-    @include p1-font;
-  }
+  @include h1-font;
+}
 
-  
-  body {
-    background: var(--bg-color);
+h2 {
+  @include h2-font;
+}
+
+h3 {
+  @include h3-font;
+}
+
+h4 {
+  @include h4-font;
+}
+
+h5 {
+  @include h5-font;
+}
+
+h6 {
+  @include h6-font;
+}
+
+body {
+  background: var(--bg-color);
+  height: 200vh;
+
+  &.maxHeight {
+    height: 100vh;
   }
-  
+}
+
+@media only screen and (min-width: 1024px) {
+  .maxHeight {
+    padding-right: .35rem;
+  }
+}

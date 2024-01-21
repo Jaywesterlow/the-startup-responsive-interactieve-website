@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;700&family=Plus+Jakarta+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;700&family=Plus+Jakarta+Sans:wght@200;300;500&display=swap");
 :root {
   --h1-size: 2.25rem;
   --h1-line: 2.75rem;
@@ -12,8 +12,13 @@
   --h5-line: 1.25rem;
   --h6-size: 1rem;
   --h6-line: 1.25rem;
+  --p1-size: 1rem;
+  --p1-line: 1.5rem;
+  --p2-size: .875rem
+  --p2-line: 1.25rem
   --weight-bold: 700;
   --weight-medium: 500;
+  --weight-light: 300;
   --primary-color: #00D146;
   --bg-color: #1B1B1B;
   --n800: #373737;
@@ -26,8 +31,8 @@
   --n100: #D0D0D0;
   --n50: #F9F9F9;
   --color-white: #fff;
-  --button: 0.5rem 1.25rem 0.75rem 1.25rem;
-  --icon: 0.75rem;
+  --button: .5rem 1.25rem .75rem 1.25rem;
+  --icon: .75rem;
   --transition-fast: 150ms;
   --transition-slow: 350ms;
 }
@@ -57,6 +62,20 @@
   margin: 0;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+html ::-webkit-scrollbar {
+  width: 0.35rem;
+}
+html ::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+html ::-webkit-scrollbar-thumb {
+  background: var(--n300);
+  border-radius: 2rem;
+}
+html ::-webkit-scrollbar-thumb:active {
+  background: var(--n400);
 }
 
 h1 {
@@ -113,17 +132,18 @@ h6 {
   margin-bottom: 2rem;
 }
 
-p {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: var(--weight-medium);
-  font-size: var(--p1-size);
-  line-height: var(--p1-line);
-  color: var(--color-white);
-  margin-bottom: 1rem;
-}
-
 body {
   background: var(--bg-color);
+  height: 200vh;
+}
+body.maxHeight {
+  height: 100vh;
+}
+
+@media only screen and (min-width: 1024px) {
+  .maxHeight {
+    padding-right: 0.35rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

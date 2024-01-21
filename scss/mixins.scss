@@ -16,9 +16,14 @@
   font-weight: var(--weight-medium);
 }
 
-@mixin font-secondary {
+@mixin font-secondary-bold {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: var(--weight-medium);
+}
+
+@mixin font-secondary-light {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: var(--weight-light);
 }
 
 @mixin h1-font {
@@ -70,7 +75,7 @@
 }
 
 @mixin p1-font {
-  @include font-secondary;
+  @include font-secondary-bold;
   font-size: var(--p1-size);
   line-height: var(--p1-line);
   color: var(--color-white);
@@ -78,7 +83,7 @@
 }
 
 @mixin p2-font {
-  @include font-secondary;
+  @include font-secondary-light;
   font-size: var(--p2-size);
   line-height: var(--p2-line);
   color: var(--color-white);
@@ -93,7 +98,7 @@
 
 
 @mixin primary-button($padding) {
-  @include font-secondary;
+  @include font-secondary-light;
   padding: $padding;
   display: inline-block;
   color: var(--color-white);
@@ -106,16 +111,18 @@
 @mixin primary-button-hover {
   border: 1px solid var(--primary-color);
   transition: var(--transition-fast);
+  cursor: pointer;
 }
 
 @mixin text-button {
-  @include font-secondary;
+  @include font-secondary-light;
   color: var(--color-white);
   text-decoration: none;
   transition: var(--transition-fast);
 }
 
 @mixin text-button-hover {
-  color: var(--n100);
+  color: var(--color-white);
   transition: var(--transition-fast);
+  cursor: pointer;
 }
