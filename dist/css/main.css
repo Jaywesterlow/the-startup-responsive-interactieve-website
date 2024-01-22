@@ -14,8 +14,8 @@
   --h6-line: 1.25rem;
   --p1-size: 1rem;
   --p1-line: 1.5rem;
-  --p2-size: .875rem
-  --p2-line: 1.25rem
+  --p2-size: .875rem;
+  --p2-line: 1.25rem;
   --weight-bold: 700;
   --weight-medium: 500;
   --weight-light: 300;
@@ -36,7 +36,7 @@
   --transition-fast: 150ms;
   --transition-slow: 350ms;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 580px) {
   :root {
     --h1-size: 3.5rem;
     --h1-line: 4rem;
@@ -50,6 +50,26 @@
     --h5-line: 1.5rem;
     --h6-size: 1.125rem;
     --h6-line: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  :root {
+    --h1-size: calc(3.5rem * 1.5);
+    --h1-line: calc(4rem * 1.5);
+    --h2-size: calc(2.5rem * 1.5);
+    --h2-line: calc(3rem * 1.5);
+    --h3-size: calc(2rem * 1.5);
+    --h3-line: calc(2.5rem * 1.5);
+    --h4-size: calc(1.5rem * 1.5);
+    --h4-line: calc(2rem * 1.5);
+    --h5-size: calc(1.25rem * 1.5);
+    --h5-line: calc(1.5rem * 1.5);
+    --h6-size: calc(1.125rem * 1.5);
+    --h6-line: calc(1.5rem * 1.5);
+    --p1-size: calc(1rem * 1.5);
+    --p1-line: calc(1.5rem * 1.5);
+    --p2-size: calc(0.875rem * 1.5);
+    --p2-line: calc(1.25rem * 1.5);
   }
 }
 
@@ -134,7 +154,7 @@ h6 {
 
 body {
   background: var(--bg-color);
-  height: 200vh;
+  min-height: 100vh;
 }
 body.maxHeight {
   height: 100vh;

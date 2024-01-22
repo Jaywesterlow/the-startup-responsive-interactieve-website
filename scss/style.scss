@@ -113,8 +113,11 @@ main {
     & h1 {
       margin: 2rem 0 2rem;
       max-width: 350px;
+      display: flex;
+      flex-direction: column;
 
-      & div {
+      &::after {
+        content: "";
         margin-top: .75rem;
         border: 1px solid var(--primary-color);
         width: 90%;
@@ -126,7 +129,7 @@ main {
         max-width: 440px;
     }
 
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 580px) {
       & h1 {
         max-width: 530px;
       }
@@ -136,9 +139,21 @@ main {
       }
     }
 
+    @media only screen and (min-width: 1024px) {
+      & h1 {
+        max-width: 720px;
+      }
+
+      & p {
+        max-width: 770px;
+      }
+    }
+
     a {
+      @include p2-font;
       @include text-button;
       display: flex;
+      align-items: center;
       width: fit-content;
 
       svg {
@@ -168,5 +183,7 @@ main {
     }
   }
 
-  
+  & div.glass {
+
+  }
 }

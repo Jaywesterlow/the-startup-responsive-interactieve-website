@@ -14,8 +14,8 @@
   --h6-line: 1.25rem;
   --p1-size: 1rem;
   --p1-line: 1.5rem;
-  --p2-size: .875rem
-  --p2-line: 1.25rem
+  --p2-size: .875rem;
+  --p2-line: 1.25rem;
   --weight-bold: 700;
   --weight-medium: 500;
   --weight-light: 300;
@@ -36,7 +36,7 @@
   --transition-fast: 150ms;
   --transition-slow: 350ms;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 580px) {
   :root {
     --h1-size: 3.5rem;
     --h1-line: 4rem;
@@ -50,6 +50,26 @@
     --h5-line: 1.5rem;
     --h6-size: 1.125rem;
     --h6-line: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  :root {
+    --h1-size: calc(3.5rem * 1.5);
+    --h1-line: calc(4rem * 1.5);
+    --h2-size: calc(2.5rem * 1.5);
+    --h2-line: calc(3rem * 1.5);
+    --h3-size: calc(2rem * 1.5);
+    --h3-line: calc(2.5rem * 1.5);
+    --h4-size: calc(1.5rem * 1.5);
+    --h4-line: calc(2rem * 1.5);
+    --h5-size: calc(1.25rem * 1.5);
+    --h5-line: calc(1.5rem * 1.5);
+    --h6-size: calc(1.125rem * 1.5);
+    --h6-line: calc(1.5rem * 1.5);
+    --p1-size: calc(1rem * 1.5);
+    --p1-line: calc(1.5rem * 1.5);
+    --p2-size: calc(0.875rem * 1.5);
+    --p2-line: calc(1.25rem * 1.5);
   }
 }
 
@@ -134,7 +154,7 @@ h6 {
 
 body {
   background: var(--bg-color);
-  height: 200vh;
+  min-height: 100vh;
 }
 body.maxHeight {
   height: 100vh;
@@ -256,8 +276,11 @@ main {
 main section#header h1 {
   margin: 2rem 0 2rem;
   max-width: 350px;
+  display: flex;
+  flex-direction: column;
 }
-main section#header h1 div {
+main section#header h1::after {
+  content: "";
   margin-top: 0.75rem;
   border: 1px solid var(--primary-color);
   width: 90%;
@@ -271,7 +294,7 @@ main section#header p {
   margin-bottom: 1rem;
   max-width: 440px;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 580px) {
   main section#header h1 {
     max-width: 530px;
   }
@@ -279,13 +302,28 @@ main section#header p {
     max-width: 600px;
   }
 }
+@media only screen and (min-width: 1024px) {
+  main section#header h1 {
+    max-width: 720px;
+  }
+  main section#header p {
+    max-width: 770px;
+  }
+}
 main section#header a {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: var(--weight-light);
+  font-size: var(--p2-size);
+  line-height: var(--p2-line);
+  color: var(--color-white);
+  margin-bottom: 1rem;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: var(--weight-light);
   color: var(--color-white);
   text-decoration: none;
   transition: var(--transition-fast);
   display: flex;
+  align-items: center;
   width: fit-content;
 }
 main section#header a svg {
