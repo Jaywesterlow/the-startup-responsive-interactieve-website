@@ -97,13 +97,13 @@
 // -----------------------------------------------------------------------------
 
 
-@mixin primary-button($padding) {
+@mixin primary-button($padding, $radius) {
   @include font-secondary-light;
   padding: $padding;
   display: inline-block;
   color: var(--color-white);
   border: 1px solid var(--n600);
-  border-radius: 24px;
+  border-radius: $radius;
   text-decoration: none;
   transition: var(--transition-fast);
 }

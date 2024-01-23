@@ -32,8 +32,10 @@
   --color-white: #fff;
   --button: .5rem 1.25rem .75rem 1.25rem;
   --icon: .75rem;
-  --transition-fast: 150ms;
-  --transition-slow: 350ms;
+  --radius-min: 24px;
+  --radius-max: 100%;
+  --transition-fast: 150ms all ease-in-out;
+  --transition-slow: 350ms all ease-in-out;
 }
 @media only screen and (min-width: 580px) {
   :root {
@@ -51,24 +53,24 @@
     --h6-line: 1.5rem;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   :root {
-    --h1-size: calc(3.5rem * 1.5);
-    --h1-line: calc(4rem * 1.5);
-    --h2-size: calc(2.5rem * 1.5);
-    --h2-line: calc(3rem * 1.5);
-    --h3-size: calc(2rem * 1.5);
-    --h3-line: calc(2.5rem * 1.5);
-    --h4-size: calc(1.5rem * 1.5);
-    --h4-line: calc(2rem * 1.5);
-    --h5-size: calc(1.25rem * 1.5);
-    --h5-line: calc(1.5rem * 1.5);
-    --h6-size: calc(1.125rem * 1.5);
-    --h6-line: calc(1.5rem * 1.5);
-    --p1-size: calc(1rem * 1.5);
-    --p1-line: calc(1.5rem * 1.5);
-    --p2-size: calc(0.875rem * 1.5);
-    --p2-line: calc(1.25rem * 1.5);
+    --h1-size: calc(3.5rem * 1.125);
+    --h1-line: calc(4rem * 1.125);
+    --h2-size: calc(2.5rem * 1.125);
+    --h2-line: calc(3rem * 1.125);
+    --h3-size: calc(2rem * 1.125);
+    --h3-line: calc(2.5rem * 1.125);
+    --h4-size: calc(1.5rem * 1.125);
+    --h4-line: calc(2rem * 1.125);
+    --h5-size: calc(1.25rem * 1.125);
+    --h5-line: calc(1.5rem * 1.125);
+    --h6-size: calc(1.125rem * 1.125);
+    --h6-line: calc(1.5rem * 1.125);
+    --p1-size: calc(1rem * 1.125);
+    --p1-line: calc(1.5rem * 1.125);
+    --p2-size: calc(0.875rem * 1.125);
+    --p2-line: calc(1.25rem * 1.125);
   }
 }
 
