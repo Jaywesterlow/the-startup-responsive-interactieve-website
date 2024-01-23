@@ -12,18 +12,11 @@ function openMenu(){
   body.classList.toggle('maxHeight')
 }
 
-// app.js
-fetch('team.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("HTTP error " + response.status);
-        }
-        return response.json();
-    })
-    .then(json => {
-        console.log(json);
-        // Hier kun je de JSON-gegevens verder verwerken
-    })
-    .catch(function() {
-        console.log("Er is een fout opgetreden bij het ophalen van het bestand.");
-    });
+fetch('team.json').then(function (response) {
+    return response.json();
+}).then(function (obj) {
+    console.log(obj);
+}).catch(function (error) {
+    console.error('er is iets fout gegaan!');
+    console.error(error);
+})
