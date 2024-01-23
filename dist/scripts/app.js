@@ -20,4 +20,3 @@ fetch('team.json').then(function (response) {
     console.error('er is iets fout gegaan!');
     console.error(error);
 })
-
