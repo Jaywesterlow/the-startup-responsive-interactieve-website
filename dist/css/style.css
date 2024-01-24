@@ -176,7 +176,7 @@ body.maxHeight {
 }
 @media only screen and (min-width: 1024px) {
   main, footer {
-    padding: 0 4rem;
+    padding: 0 10rem;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -476,20 +476,20 @@ main a.scroll-mouse::before {
 main a.scroll-mouse:active::before {
   border: 2px solid var(--n100);
 }
-main a.scroll-mouse::after {
-  content: url(../../assets/icons/pointer.svg);
+main a.scroll-mouse svg {
   position: absolute;
   display: inline-block;
   width: 12px;
   height: 21px;
   margin-top: 2px;
   transform: rotateZ(90deg);
-  fill: var(--primary-color);
+  fill: var(--color-white);
   left: calc(50% - 6px);
   top: 3rem;
   transition: var(--transition-slow);
 }
-main a.scroll-mouse:hover::after, main a.scroll-mouse :active::after {
+main a.scroll-mouse:hover svg,
+main a.scroll-mouse :active svg {
   margin-top: 7px;
   fill: var(--primary-color);
   cursor: pointer;
@@ -497,6 +497,118 @@ main a.scroll-mouse:hover::after, main a.scroll-mouse :active::after {
 @media only screen and (min-width: 1024px) {
   main a.scroll-mouse {
     display: block;
+  }
+}
+@keyframes swipe-motion {
+  0% {
+    top: 2rem;
+    right: -3rem;
+    transform: rotate(-55deg);
+    opacity: 0;
+  }
+  25% {
+    top: 0.25rem;
+    right: -2rem;
+    transform: rotate(-60deg);
+    opacity: 1;
+  }
+  50% {
+    top: 0.25rem;
+    right: -2.25rem;
+    transform: rotate(-120deg);
+    transform-origin: 29px 20px;
+  }
+  65% {
+    opacity: 1;
+  }
+  75%, 98% {
+    top: -3rem;
+    right: -2.25rem;
+    transform: rotate(-20deg);
+    transform-origin: center;
+  }
+  98% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes swiped {
+  0%, 50% {
+    top: 0;
+    opacity: 1;
+  }
+  80% {
+    top: -2rem;
+    opacity: 0;
+  }
+  90% {
+    top: 0;
+    opacity: 0;
+  }
+  95% {
+    top: 0;
+    opacity: 0.5;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+main a.swipe-finger {
+  position: absolute;
+  left: calc(50% - 2.5rem);
+  bottom: 10rem;
+  transition: var(--transition-fast);
+  display: block;
+}
+main a.swipe-finger > span {
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 2px solid var(--color-white);
+  border-radius: var(--radius-max);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: calc(50% - 0.5rem);
+  top: 0.375rem;
+  animation: swiped 4s infinite;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+}
+main a.swipe-finger > span:active {
+  border: 2px solid var(--n100);
+}
+main a.swipe-finger > span > span {
+  width: 0.95rem;
+  height: 0.95rem;
+  background-color: var(--n50);
+  border-radius: var(--radius-max);
+}
+main a.swipe-finger > span > span:active {
+  background-color: var(--n100);
+}
+main a.swipe-finger svg {
+  position: relative;
+  top: 2rem;
+  right: -3rem;
+  width: 5rem;
+  height: auto;
+  fill: var(--color-white);
+  transform: rotate(-30deg);
+  animation: swipe-motion 4s infinite;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+}
+main a.swipe-finger:hover svg,
+main a.swipe-finger :active svg {
+  fill: var(--n100);
+}
+@media only screen and (min-width: 1024px) {
+  main a.swipe-finger {
+    display: none;
   }
 }
 main section#team {
@@ -509,6 +621,31 @@ main section#team > h2 {
   display: flex;
   flex-direction: column;
 }
+main section#team h3 {
+  text-align: center;
+  font-weight: 100;
+}
+main section#team > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.5rem;
+}
+main section#team > ul li {
+  text-align: center;
+  border: 2px solid var(--n800);
+  background-color: #3737375e;
+  padding: 12px 9px;
+  min-width: 3.5rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: var(--weight-medium);
+  font-size: var(--p1-size);
+  line-height: var(--p1-line);
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  list-style: none;
+  border-radius: 10px;
+}
 main section#team div#team-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -520,12 +657,21 @@ main section#team div#team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media only screen and (min-width: 1200px) {
+  main section#team div#team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 main section#team div#team-grid div.card {
-  border: none;
-  background-color: var(--n800);
+  border: 2px solid var(--color-white);
+  background-color: #37373725;
   border-radius: var(--radius-min);
   box-shadow: none;
   padding: 1rem;
+  transition: var(--transition-slow);
+}
+main section#team div#team-grid div.card:hover {
+  border: 2px solid var(--primary-color);
 }
 main section#team div#team-grid div.card div.card-main {
   display: flex;
@@ -535,16 +681,20 @@ main section#team div#team-grid div.card div.card-main img {
   width: 150px;
   border-radius: var(--radius-max);
   margin: 0 1rem 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: var(--weight-light);
+  font-size: var(--p2-size);
+  line-height: var(--p2-line);
+  color: var(--color-white);
+  margin-bottom: 1rem;
 }
 main section#team div#team-grid div.card div.card-main article {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-@media only screen and (min-width: 1200px) {
-  main section#team div#team-grid div.card div.card-main article {
-    justify-content: end;
-  }
 }
 main section#team div#team-grid div.card div.card-main article h3 {
   margin: 0;
@@ -556,6 +706,7 @@ main section#team div#team-grid div.card div.card-main article h4 {
   line-height: var(--h5-line);
   color: var(--color-white);
   margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 main section#team div#team-grid div.card div.card-details p {
   display: -webkit-box;
@@ -570,7 +721,7 @@ main section#team div#team-grid div.card div.card-details p:nth-child(1) {
   line-height: var(--p1-line);
   color: var(--color-white);
   margin-bottom: 1rem;
-  margin: 0;
+  text-align: center;
 }
 main section#team div#team-grid div.card div.card-details p:nth-child(2) {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -708,6 +859,16 @@ footer section:nth-child(3) {
   }
   footer section:nth-child(3) a:nth-child(6) {
     margin-left: auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  footer section:nth-child(3) {
+    padding: 2rem 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  footer section:nth-child(3) {
+    padding: 2rem;
   }
 }
 footer section:nth-child(3) a {

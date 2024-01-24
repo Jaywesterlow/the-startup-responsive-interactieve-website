@@ -9,13 +9,13 @@ header {
   position: sticky;
   width: 100%;
   padding: 1.75rem 1rem;
-  
+
   @media only screen and (min-width: 768px) {
-      padding: 1.75rem 2rem;
+    padding: 1.75rem 2rem;
   }
-  
+
   @media only screen and (min-width: 1024px) {
-      padding: 1.75rem 10rem;
+    padding: 1.75rem 10rem;
   }
 
   & img {
@@ -25,7 +25,6 @@ header {
       height: calc(2.75rem * 1.5);
     }
   }
-
 
   & nav {
     @include primary-button(var(--icon), var(--radius-max));
@@ -63,7 +62,6 @@ header {
     &.active {
       & span {
         transition: var(--transition-slow);
-        
 
         &:nth-child(1) {
           transform: rotate(45deg);
@@ -83,14 +81,14 @@ header {
     nav {
       width: calc(2.75rem * 1.5);
       height: calc(2.75rem * 1.5);
-  
+
       & span {
         border: 1.75px solid var(--color-white);
-  
+
         &:nth-child(1) {
           top: calc(1rem * 1.5);
         }
-  
+
         &:nth-child(2) {
           bottom: calc(1rem * 1.5);
         }
@@ -144,7 +142,6 @@ body > ul {
 }
 
 main {
-  
   & section#header {
     height: calc(100svh - 6.25rem);
     padding-top: 2.75rem;
@@ -235,7 +232,7 @@ main {
     }
   }
 
-  @keyframes scrollwheel {    
+  @keyframes scrollwheel {
     0%,
     50% {
       top: 0;
@@ -243,7 +240,7 @@ main {
     }
 
     80% {
-      top: .5rem;
+      top: 0.5rem;
       opacity: 0;
     }
 
@@ -251,12 +248,12 @@ main {
       top: 0;
       opacity: 0;
     }
-    
+
     95% {
       top: 0;
-      opacity: .5;
+      opacity: 0.5;
     }
-    
+
     100% {
       top: 0;
       opacity: 1;
@@ -265,7 +262,7 @@ main {
 
   & a.scroll-mouse {
     border: 2px solid var(--color-white);
-    padding: .75rem 1rem 1.25rem;
+    padding: 0.75rem 1rem 1.25rem;
     border-radius: var(--radius-min);
     position: absolute;
     left: calc(50% - 1.25rem);
@@ -280,14 +277,14 @@ main {
     &:active {
       border: 2px solid var(--n100);
     }
-    
+
     &::before {
       content: "";
       position: relative;
       display: inline-block;
       background-color: var(--color-white);
-      width: .25rem;
-      height: .75rem;
+      width: 0.25rem;
+      height: 0.75rem;
       border-radius: var(--radius-min);
       animation: scrollwheel 3s infinite;
       animation-timing-function: ease-in-out;
@@ -299,21 +296,21 @@ main {
       border: 2px solid var(--n100);
     }
 
-    &::after {
-      content: url(../../assets/icons/pointer.svg);
+    & svg {
       position: absolute;
       display: inline-block;
       width: 12px;
       height: 21px;
       margin-top: 2px;
       transform: rotateZ(90deg);
-      fill: var(--primary-color);
+      fill: var(--color-white);
       left: calc(50% - 6px);
       top: 3rem;
       transition: var(--transition-slow);
     }
 
-    &:hover::after, :active::after {
+    &:hover svg,
+    :active svg {
       margin-top: 7px;
       fill: var(--primary-color);
       cursor: pointer;
@@ -321,6 +318,138 @@ main {
 
     @media only screen and (min-width: 1024px) {
       display: block;
+    }
+  }
+
+  @keyframes swipe-motion {
+    0% {
+      top: 2rem;
+      right: -3rem;
+      transform: rotate(-55deg);
+      opacity: 0;
+    }
+
+    25% {
+      top: 0.25rem;
+      right: -2rem;
+      transform: rotate(-60deg);
+      opacity: 1;
+    }
+
+    50% {
+      top: 0.25rem;
+      right: -2.25rem;
+      transform: rotate(-120deg);
+      transform-origin: 29px 20px;
+    }
+
+    65% {
+      opacity: 1;
+    }
+
+    75%,
+    98% {
+      top: -3rem;
+      right: -2.25rem;
+      transform: rotate(-20deg);
+      transform-origin: center;
+    }
+
+    98% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes swiped {
+    0%,
+    50% {
+      top: 0;
+      opacity: 1;
+    }
+
+    80% {
+      top: -2rem;
+      opacity: 0;
+    }
+
+    90% {
+      top: 0;
+      opacity: 0;
+    }
+
+    95% {
+      top: 0;
+      opacity: 0.5;
+    }
+
+    100% {
+      top: 0;
+      opacity: 1;
+    }
+  }
+
+  & a.swipe-finger {
+    position: absolute;
+    left: calc(50% - 2.5rem);
+    bottom: 10rem;
+    transition: var(--transition-fast);
+    display: block;
+
+    & > span {
+      width: 1.75rem;
+      height: 1.75rem;
+      border: 2px solid var(--color-white);
+      border-radius: var(--radius-max);
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: calc(50% - 0.5rem);
+      top: 0.375rem;
+      animation: swiped 4s infinite;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-timing-function: ease-in-out;
+
+      &:active {
+        border: 2px solid var(--n100);
+      }
+
+      & > span {
+        width: 0.95rem;
+        height: 0.95rem;
+        background-color: var(--n50);
+        border-radius: var(--radius-max);
+
+        &:active {
+          background-color: var(--n100);
+        }
+      }
+    }
+
+    & svg {
+      position: relative;
+      top: 2rem;
+      right: -3rem;
+      width: 5rem;
+      height: auto;
+      fill: var(--color-white);
+      transform: rotate(-30deg);
+      animation: swipe-motion 4s infinite;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-timing-function: ease-in-out;
+    }
+
+    &:hover svg,
+    :active svg {
+      fill: var(--n100);
+    }
+
+    @media only screen and (min-width: 1024px) {
+      display: none;
     }
   }
 
@@ -334,6 +463,31 @@ main {
       display: flex;
       flex-direction: column;
     }
+
+    & h3 {
+      text-align: center;
+      font-weight: 100;
+    }
+
+    & > ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 0.5rem;
+
+      & li {
+        text-align: center;
+        border: 2px solid var(--n800);
+        background-color: #3737375e;
+        padding: 12px 9px;
+        min-width: 3.5rem;
+        @include p1-font;
+
+        list-style: none;
+        border-radius: 10px;
+      }
+    }
+
     & div#team-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -344,12 +498,21 @@ main {
         grid-template-columns: repeat(2, 1fr);
       }
 
+      @media only screen and (min-width: 1200px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
       & div.card {
-        border: none;
-        background-color: var(--n800);
+        border: 2px solid var(--color-white);
+        background-color: #37373725;
         border-radius: var(--radius-min);
         box-shadow: none;
-        padding: 1rem;        
+        padding: 1rem;
+        transition: var(--transition-slow);
+
+        &:hover {
+          border: 2px solid var(--primary-color);
+        }
 
         & div.card-main {
           display: flex;
@@ -359,6 +522,10 @@ main {
             width: 150px;
             border-radius: var(--radius-max);
             margin: 0 1rem 1rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include p2-font;
           }
 
           & article {
@@ -366,15 +533,13 @@ main {
             flex-direction: column;
             justify-content: center;
 
-            @media only screen and (min-width: 1200px) {
-              justify-content: end;
-            }
             & h3 {
               margin: 0;
             }
-            
+
             & h4 {
               @include h5-font;
+              margin-top: 1rem;
             }
           }
         }
@@ -388,9 +553,9 @@ main {
 
             &:nth-child(1) {
               @include p1-font;
-              margin: 0;
+              text-align: center;
             }
-            
+
             &:nth-child(2) {
               @include p2-font;
               margin: 0;
@@ -403,11 +568,9 @@ main {
 }
 
 footer {
-
   h2 {
     @include p1-font;
     margin-bottom: 2rem;
-
 
     @media only screen and (min-width: 1200px) {
       padding: 0 6rem;
@@ -419,11 +582,10 @@ footer {
   }
 
   section:nth-child(2) {
-  
     @media only screen and (min-width: 1200px) {
       padding: 0 6rem;
     }
-  
+
     @media only screen and (min-width: 1600px) {
       padding: 0 14rem;
     }
@@ -453,38 +615,37 @@ footer {
       @media only screen and (min-width: 1024px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 
-        "li1 li5"
-        "li2 li6"
-        "li3 li7"
-        "li4 .";
+        grid-template-areas:
+          "li1 li5"
+          "li2 li6"
+          "li3 li7"
+          "li4 .";
 
         & li {
-          
           &:nth-child(1) {
             grid-area: li1;
           }
-          
+
           &:nth-child(2) {
             grid-area: li2;
           }
-          
+
           &:nth-child(3) {
             grid-area: li3;
           }
-          
+
           &:nth-child(4) {
             grid-area: li4;
           }
-          
+
           &:nth-child(5) {
             grid-area: li5;
           }
-          
+
           &:nth-child(6) {
             grid-area: li6;
           }
-          
+
           &:nth-child(7) {
             grid-area: li7;
           }
@@ -504,29 +665,28 @@ footer {
               transition: var(--transition-slow);
               background: var(--primary-color);
               position: absolute;
-              bottom: -.5rem;
+              bottom: -0.5rem;
               left: 0;
             }
-              
+
             &:hover::after {
               width: 100%;
             }
-  
+
             & svg {
               display: none;
-            }     
+            }
           }
         }
       }
     }
   }
-  
+
   section:nth-child(3) {
     border-top: 2px solid var(--n800);
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    
 
     @media only screen and (min-width: 768px) {
       display: flex;
@@ -537,17 +697,23 @@ footer {
       & a:first-child {
         margin-right: auto;
       }
-    
-      & a:nth-child(6){
+
+      & a:nth-child(6) {
         margin-left: auto;
       }
     }
-    
+
+    @media only screen and (min-width: 1024px) {
+      padding: 2rem 0;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      padding: 2rem;
+    }
 
     & a {
       margin-bottom: 2rem;
       @include text-button;
-
 
       &:hover {
         @include text-button-hover;
@@ -559,26 +725,3 @@ footer {
     }
   }
 }
-
-// .card {
-//   border: 1px solid #ccc;
-//   margin: 10px;
-//   padding: 10px;
-//   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-// }
-
-// .card img {
-//   width: 100%;
-//   height: auto;
-//   border-radius: 50%;
-// }
-
-// .card .container {
-//   padding: 10px;
-//   background-color: #f9f9f9;
-// }
-
-// .card .title {
-//   font-size: 20px;
-//   color: #333;
-// }
