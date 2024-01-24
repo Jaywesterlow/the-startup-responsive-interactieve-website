@@ -1,4 +1,4 @@
-[
+const team = [
   {
     "id": 1,
     "first_name": "Ibbie",
@@ -6,7 +6,7 @@
     "job_title": "Front-end Developer",
     "department": "Training",
     "bio": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-    "img": "image-0.png"
+    "img": "../../assets/images/team-images/image-0.png"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "job_title": "Front-end Developer",
     "department": "Sales",
     "bio": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
-    "img": "image-1.png"
+    "img": "../../assets/images/team-images/image-1.png"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "job_title": "Back-end Developer",
     "department": "Legal",
     "bio": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
-    "img": "image-2.png"
+    "img": "../../assets/images/team-images/image-2.png"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "job_title": "Android Developer",
     "department": "Sales",
     "bio": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-    "img": "image-3.png"
+    "img": "../../assets/images/team-images/image-3.png"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "job_title": "Front-end Developer",
     "department": "Training",
     "bio": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
-    "img": "image-4.png"
+    "img": "../../assets/images/team-images/image-4.png"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "job_title": "Back-end Developer",
     "department": "Product Management",
     "bio": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-    "img": "image-5.png"
+    "img": "../../assets/images/team-images/image-5.png"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "job_title": "Scrum Master",
     "department": "Sales",
     "bio": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-    "img": "image-6.png"
+    "img": "../../assets/images/team-images/image-6.png"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "job_title": "Lead Client Team",
     "department": "Services",
     "bio": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
-    "img": "image-7.png"
+    "img": "../../assets/images/team-images/image-7.png"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "job_title": "Android Developer",
     "department": "Accounting",
     "bio": "Fusce consequat. Nulla nisl. Nunc nisl.",
-    "img": "image-8.png"
+    "img": "../../assets/images/team-images/image-8.png"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "job_title": "Front-end Developer",
     "department": "Human Resources",
     "bio": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-    "img": "image-9.png"
+    "img": "../../assets/images/team-images/image-9.png"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "job_title": "UI Designer",
     "department": "Product Management",
     "bio": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
-    "img": "image-10.png"
+    "img": "../../assets/images/team-images/image-10.png"
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "job_title": "Back-end Developer",
     "department": "Marketing",
     "bio": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
-    "img": "image-11.png"
+    "img": "../../assets/images/team-images/image-11.png"
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "job_title": "Commercial Director",
     "department": "Services",
     "bio": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-    "img": "image-12.png"
+    "img": "../../assets/images/team-images/image-12.png"
   },
   {
     "id": 14,
@@ -123,7 +123,7 @@
     "job_title": "Front-end Developer",
     "department": "Accounting",
     "bio": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
-    "img": "image-13.png"
+    "img": "../../assets/images/team-images/image-13.png"
   },
   {
     "id": 15,
@@ -132,7 +132,7 @@
     "job_title": "UI Designer",
     "department": "Sales",
     "bio": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-    "img": "image-14.png"
+    "img": "../../assets/images/team-images/image-14.png"
   },
   {
     "id": 16,
@@ -141,7 +141,7 @@
     "job_title": "Technical Support Lead",
     "department": "Services",
     "bio": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "img": "image-15.png"
+    "img": "../../assets/images/team-images/image-15.png"
   },
   {
     "id": 17,
@@ -150,7 +150,7 @@
     "job_title": "Technical Support Specialist",
     "department": "Sales",
     "bio": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-    "img": "image-16.png"
+    "img": "../../assets/images/team-images/image-16.png"
   },
   {
     "id": 18,
@@ -159,7 +159,7 @@
     "job_title": "Innovation Strategist",
     "department": "Engineering",
     "bio": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
-    "img": "image-17.png"
+    "img": "../../assets/images/team-images/image-17.png"
   },
   {
     "id": 19,
@@ -168,7 +168,7 @@
     "job_title": "Data Engineer",
     "department": "Human Resources",
     "bio": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-    "img": "image-18.png"
+    "img": "../../assets/images/team-images/image-18.png"
   },
   {
     "id": 20,
@@ -177,7 +177,7 @@
     "job_title": "Back-end Developer",
     "department": "Product Management",
     "bio": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
-    "img": "image-19.png"
+    "img": "../../assets/images/team-images/image-19.png"
   },
   {
     "id": 21,
@@ -186,7 +186,7 @@
     "job_title": "Front-end Developer",
     "department": "Product Management",
     "bio": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-    "img": "image-20.png"
+    "img": "../../assets/images/team-images/image-20.png"
   },
   {
     "id": 22,
@@ -195,7 +195,7 @@
     "job_title": "Office Angel 010",
     "department": "Sales",
     "bio": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-    "img": "image-21.png"
+    "img": "../../assets/images/team-images/image-21.png"
   },
   {
     "id": 23,
@@ -204,7 +204,7 @@
     "job_title": "Back-end Developer",
     "department": "Marketing",
     "bio": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-    "img": "image-22.png"
+    "img": "../../assets/images/team-images/image-22.png"
   },
   {
     "id": 24,
@@ -213,7 +213,7 @@
     "job_title": "Front-end Developer",
     "department": "Product Management",
     "bio": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-    "img": "image-23.png"
+    "img": "../../assets/images/team-images/image-23.png"
   },
   {
     "id": 25,
@@ -222,7 +222,7 @@
     "job_title": "iOS Developer",
     "department": "Research and Development",
     "bio": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
-    "img": "image-24.png"
+    "img": "../../assets/images/team-images/image-24.png"
   },
   {
     "id": 26,
@@ -231,7 +231,7 @@
     "job_title": "Front-end Developer",
     "department": "Human Resources",
     "bio": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
-    "img": "image-25.png"
+    "img": "../../assets/images/team-images/image-25.png"
   },
   {
     "id": 27,
@@ -240,7 +240,7 @@
     "job_title": "Front-end Developer",
     "department": "Marketing",
     "bio": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-    "img": "image-26.png"
+    "img": "../../assets/images/team-images/image-26.png"
   },
   {
     "id": 28,
@@ -249,7 +249,7 @@
     "job_title": "Back-end Developer",
     "department": "Research and Development",
     "bio": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
-    "img": "image-27.png"
+    "img": "../../assets/images/team-images/image-27.png"
   },
   {
     "id": 29,
@@ -258,7 +258,7 @@
     "job_title": "Front-end Developer",
     "department": "Training",
     "bio": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
-    "img": "image-28.png"
+    "img": "../../assets/images/team-images/image-28.png"
   },
   {
     "id": 30,
@@ -267,7 +267,7 @@
     "job_title": "Account & Technology Director",
     "department": "Product Management",
     "bio": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-    "img": "image-29.png"
+    "img": "../../assets/images/team-images/image-29.png"
   },
   {
     "id": 31,
@@ -276,7 +276,7 @@
     "job_title": "Cloud Engineer",
     "department": "Business Development",
     "bio": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
-    "img": "image-30.png"
+    "img": "../../assets/images/team-images/image-30.png"
   },
   {
     "id": 32,
@@ -285,7 +285,7 @@
     "job_title": "UX Lead",
     "department": "Business Development",
     "bio": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-    "img": "image-31.png"
+    "img": "../../assets/images/team-images/image-31.png"
   },
   {
     "id": 33,
@@ -294,7 +294,7 @@
     "job_title": "System Operations",
     "department": "Accounting",
     "bio": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-    "img": "image-32.png"
+    "img": "../../assets/images/team-images/image-32.png"
   },
   {
     "id": 34,
@@ -303,7 +303,7 @@
     "job_title": "Scrum Master",
     "department": "Support",
     "bio": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
-    "img": "image-33.png"
+    "img": "../../assets/images/team-images/image-33.png"
   },
   {
     "id": 35,
@@ -312,7 +312,7 @@
     "job_title": "Front-end Developer",
     "department": "Accounting",
     "bio": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "img": "image-34.png"
+    "img": "../../assets/images/team-images/image-34.png"
   },
   {
     "id": 36,
@@ -321,7 +321,7 @@
     "job_title": "Managing Director",
     "department": "Sales",
     "bio": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-    "img": "image-35.png"
+    "img": "../../assets/images/team-images/image-35.png"
   },
   {
     "id": 37,
@@ -330,7 +330,7 @@
     "job_title": "Managing Director",
     "department": "Services",
     "bio": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-    "img": "image-36.png"
+    "img": "../../assets/images/team-images/image-36.png"
   },
   {
     "id": 38,
@@ -339,7 +339,7 @@
     "job_title": "Front-end Developer",
     "department": "Accounting",
     "bio": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-    "img": "image-37.png"
+    "img": "../../assets/images/team-images/image-37.png"
   },
   {
     "id": 39,
@@ -348,7 +348,7 @@
     "job_title": "Android Developer",
     "department": "Sales",
     "bio": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
-    "img": "image-38.png"
+    "img": "../../assets/images/team-images/image-38.png"
   },
   {
     "id": 40,
@@ -357,7 +357,7 @@
     "job_title": "Android Developer",
     "department": "Engineering",
     "bio": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
-    "img": "image-39.png"
+    "img": "../../assets/images/team-images/image-39.png"
   },
   {
     "id": 41,
@@ -366,7 +366,7 @@
     "job_title": "UX/UI Designer",
     "department": "Accounting",
     "bio": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
-    "img": "image-40.png"
+    "img": "../../assets/images/team-images/image-40.png"
   },
   {
     "id": 42,
@@ -375,7 +375,7 @@
     "job_title": "UX Designer",
     "department": "Accounting",
     "bio": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-    "img": "image-41.png"
+    "img": "../../assets/images/team-images/image-41.png"
   },
   {
     "id": 43,
@@ -384,7 +384,7 @@
     "job_title": "iOS Developer",
     "department": "Human Resources",
     "bio": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-    "img": "image-42.png"
+    "img": "../../assets/images/team-images/image-42.png"
   },
   {
     "id": 44,
@@ -393,7 +393,7 @@
     "job_title": "Tech Lead",
     "department": "Business Development",
     "bio": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
-    "img": "image-43.png"
+    "img": "../../assets/images/team-images/image-43.png"
   },
   {
     "id": 45,
@@ -402,6 +402,8 @@
     "job_title": "Developer",
     "department": "Legal",
     "bio": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
-    "img": "image-44.png"
+    "img": "../../assets/images/team-images/image-44.png"
   }
-]
+];
+
+export default team;

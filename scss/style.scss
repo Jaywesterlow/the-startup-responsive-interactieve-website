@@ -307,7 +307,7 @@ main {
       height: 21px;
       margin-top: 2px;
       transform: rotateZ(90deg);
-      fill: var(--primary-color)!important;
+      fill: var(--primary-color);
       left: calc(50% - 6px);
       top: 3rem;
       transition: var(--transition-slow);
@@ -325,14 +325,43 @@ main {
   }
 
   section#team {
-    height: calc(100vh + 6.25rem);
+    height: fit-content;
     padding-top: 6.25rem;
 
-    & h2 {
+    & > h2 {
       margin: 2rem 0 2rem;
       max-width: 350px;
       display: flex;
       flex-direction: column;
+    }
+    & div#team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding-bottom: 8rem;
+
+      & div.card {
+        border: none;
+        background-color: var(--n800);
+        border-radius: var(--radius-min);
+        box-shadow: none;
+        padding: 1rem;
+
+        & p {
+          @include p2-font
+        }
+
+        & div.card-title {
+          display: flex;
+
+          & img {
+            height: 150px;
+            width: 150px;
+            border-radius: var(--radius-max);
+            margin-right: 5px;
+          }
+        }
+      }
     }
   }
 }
@@ -495,25 +524,25 @@ footer {
   }
 }
 
-.card {
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-}
+// .card {
+//   border: 1px solid #ccc;
+//   margin: 10px;
+//   padding: 10px;
+//   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+// }
 
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
+// .card img {
+//   width: 100%;
+//   height: auto;
+//   border-radius: 50%;
+// }
 
-.card .container {
-  padding: 10px;
-  background-color: #f9f9f9;
-}
+// .card .container {
+//   padding: 10px;
+//   background-color: #f9f9f9;
+// }
 
-.card .title {
-  font-size: 20px;
-  color: #333;
-}
+// .card .title {
+//   font-size: 20px;
+//   color: #333;
+// }
