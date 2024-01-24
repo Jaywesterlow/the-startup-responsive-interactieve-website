@@ -645,6 +645,11 @@ main section#team > ul li {
   margin-bottom: 1rem;
   list-style: none;
   border-radius: 10px;
+  transition: var(--transition-slow);
+  cursor: pointer;
+}
+main section#team > ul li:active {
+  background-color: var(--n800);
 }
 main section#team div#team-grid {
   display: grid;

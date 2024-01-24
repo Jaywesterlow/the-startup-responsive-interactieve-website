@@ -482,9 +482,14 @@ main {
         padding: 12px 9px;
         min-width: 3.5rem;
         @include p1-font;
-
         list-style: none;
         border-radius: 10px;
+        transition: var(--transition-slow);
+        cursor: pointer;
+
+        &:active {
+          background-color: var(--n800);
+        }
       }
     }
 
