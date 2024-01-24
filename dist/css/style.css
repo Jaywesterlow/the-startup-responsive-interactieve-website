@@ -161,7 +161,6 @@ body {
   background: var(--bg-color);
 }
 body.maxHeight {
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -288,7 +287,7 @@ body > ul {
   height: calc(100vh - 6.25rem);
   opacity: 0.9;
   transition: var(--transition-slow);
-  background-color: var(--primary-color);
+  background-color: var(--bg-color);
   position: fixed;
   left: 0;
   width: 100%;
@@ -485,7 +484,7 @@ main a.scroll-mouse::after {
   height: 21px;
   margin-top: 2px;
   transform: rotateZ(90deg);
-  fill: var(--primary-color) !important;
+  fill: var(--primary-color);
   left: calc(50% - 6px);
   top: 3rem;
   transition: var(--transition-slow);
@@ -501,14 +500,86 @@ main a.scroll-mouse:hover::after, main a.scroll-mouse :active::after {
   }
 }
 main section#team {
-  height: calc(100vh + 6.25rem);
+  height: fit-content;
   padding-top: 6.25rem;
 }
-main section#team h2 {
+main section#team > h2 {
   margin: 2rem 0 2rem;
   max-width: 350px;
   display: flex;
   flex-direction: column;
+}
+main section#team div#team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-bottom: 8rem;
+}
+@media only screen and (min-width: 1024px) {
+  main section#team div#team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+main section#team div#team-grid div.card {
+  border: none;
+  background-color: var(--n800);
+  border-radius: var(--radius-min);
+  box-shadow: none;
+  padding: 1rem;
+}
+main section#team div#team-grid div.card div.card-main {
+  display: flex;
+}
+main section#team div#team-grid div.card div.card-main img {
+  height: 150px;
+  width: 150px;
+  border-radius: var(--radius-max);
+  margin: 0 1rem 1rem 0;
+}
+main section#team div#team-grid div.card div.card-main article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media only screen and (min-width: 1200px) {
+  main section#team div#team-grid div.card div.card-main article {
+    justify-content: end;
+  }
+}
+main section#team div#team-grid div.card div.card-main article h3 {
+  margin: 0;
+}
+main section#team div#team-grid div.card div.card-main article h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: var(--weight-medium);
+  font-size: var(--h5-size);
+  line-height: var(--h5-line);
+  color: var(--color-white);
+  margin-bottom: 2rem;
+}
+main section#team div#team-grid div.card div.card-details p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+main section#team div#team-grid div.card div.card-details p:nth-child(1) {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: var(--weight-medium);
+  font-size: var(--p1-size);
+  line-height: var(--p1-line);
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  margin: 0;
+}
+main section#team div#team-grid div.card div.card-details p:nth-child(2) {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: var(--weight-light);
+  font-size: var(--p2-size);
+  line-height: var(--p2-line);
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  margin: 0;
 }
 
 footer h2 {
@@ -654,29 +725,6 @@ footer section:nth-child(3) a:hover {
 }
 footer section:nth-child(3) a:active {
   color: var(--n100);
-}
-
-.card {
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
-.card .container {
-  padding: 10px;
-  background-color: #f9f9f9;
-}
-
-.card .title {
-  font-size: 20px;
-  color: #333;
 }
 
 /*# sourceMappingURL=style.css.map */

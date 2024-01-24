@@ -1,3 +1,5 @@
+import team from "./team.js";
+
 const menuBtn = document.getElementById("menu-btn");
 const menuContent = document.getElementById("menu-content");
 const body = document.querySelector('body');
@@ -12,11 +14,30 @@ function openMenu(){
   body.classList.toggle('maxHeight')
 }
 
-fetch('team.json').then(function (response) {
-    return response.json();
-}).then(function (obj) {
-    console.log(obj);
-}).catch(function (error) {
-    console.error('er is iets fout gegaan!');
-    console.error(error);
-})
+function createTeamCards(team) {
+    return team.map(member => `
+      <div class="card">
+        <div class="card-main">
+          <img src="${member.img}" alt="portrait of ${member.first_name} ${member.last_name}">
+          <article>
+            <h3>${member.first_name} ${member.last_name}</h3>
+            <h4>${member.job_title}</h4>
+          </article>
+        </div>
+        <div class="card-details">
+          <p>${member.department}</p>
+          <p>${member.bio}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+  
+  document.getElementById('team-grid').innerHTML = createTeamCards(team);
+
+function filter(job) {
+    return team.filter(member => member.job_title === job);
+}
+
+console.log(filter('Managing Director'));
+
+
