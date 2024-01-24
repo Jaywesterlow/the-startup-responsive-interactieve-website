@@ -336,29 +336,65 @@ main {
     }
     & div#team-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       gap: 2rem;
       padding-bottom: 8rem;
+
+      @media only screen and (min-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
       & div.card {
         border: none;
         background-color: var(--n800);
         border-radius: var(--radius-min);
         box-shadow: none;
-        padding: 1rem;
+        padding: 1rem;        
 
-        & p {
-          @include p2-font
-        }
-
-        & div.card-title {
+        & div.card-main {
           display: flex;
 
           & img {
             height: 150px;
             width: 150px;
             border-radius: var(--radius-max);
-            margin-right: 5px;
+            margin: 0 1rem 1rem 0;
+          }
+
+          & article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @media only screen and (min-width: 1200px) {
+              justify-content: end;
+            }
+            & h3 {
+              margin: 0;
+            }
+            
+            & h4 {
+              @include h5-font;
+            }
+          }
+        }
+
+        & div.card-details {
+          & p {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+            &:nth-child(1) {
+              @include p1-font;
+              margin: 0;
+            }
+            
+            &:nth-child(2) {
+              @include p2-font;
+              margin: 0;
+            }
           }
         }
       }

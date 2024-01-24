@@ -17,14 +17,14 @@ function openMenu(){
 function createTeamCards(team) {
     return team.map(member => `
       <div class="card">
-        <div class="card-title">
+        <div class="card-main">
           <img src="${member.img}" alt="portrait of ${member.first_name} ${member.last_name}">
           <article>
             <h3>${member.first_name} ${member.last_name}</h3>
             <h4>${member.job_title}</h4>
           </article>
         </div>
-        <div class="card-body">
+        <div class="card-details">
           <p>${member.department}</p>
           <p>${member.bio}</p>
         </div>

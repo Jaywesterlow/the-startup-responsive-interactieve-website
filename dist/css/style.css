@@ -161,7 +161,6 @@ body {
   background: var(--bg-color);
 }
 body.maxHeight {
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -512,9 +511,14 @@ main section#team > h2 {
 }
 main section#team div#team-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
   padding-bottom: 8rem;
+}
+@media only screen and (min-width: 1024px) {
+  main section#team div#team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 main section#team div#team-grid div.card {
   border: none;
@@ -523,22 +527,59 @@ main section#team div#team-grid div.card {
   box-shadow: none;
   padding: 1rem;
 }
-main section#team div#team-grid div.card p {
+main section#team div#team-grid div.card div.card-main {
+  display: flex;
+}
+main section#team div#team-grid div.card div.card-main img {
+  height: 150px;
+  width: 150px;
+  border-radius: var(--radius-max);
+  margin: 0 1rem 1rem 0;
+}
+main section#team div#team-grid div.card div.card-main article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media only screen and (min-width: 1200px) {
+  main section#team div#team-grid div.card div.card-main article {
+    justify-content: end;
+  }
+}
+main section#team div#team-grid div.card div.card-main article h3 {
+  margin: 0;
+}
+main section#team div#team-grid div.card div.card-main article h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: var(--weight-medium);
+  font-size: var(--h5-size);
+  line-height: var(--h5-line);
+  color: var(--color-white);
+  margin-bottom: 2rem;
+}
+main section#team div#team-grid div.card div.card-details p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+main section#team div#team-grid div.card div.card-details p:nth-child(1) {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: var(--weight-medium);
+  font-size: var(--p1-size);
+  line-height: var(--p1-line);
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  margin: 0;
+}
+main section#team div#team-grid div.card div.card-details p:nth-child(2) {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: var(--weight-light);
   font-size: var(--p2-size);
   line-height: var(--p2-line);
   color: var(--color-white);
   margin-bottom: 1rem;
-}
-main section#team div#team-grid div.card div.card-title {
-  display: flex;
-}
-main section#team div#team-grid div.card div.card-title img {
-  height: 150px;
-  width: 150px;
-  border-radius: var(--radius-max);
-  margin-right: 5px;
+  margin: 0;
 }
 
 footer h2 {

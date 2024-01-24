@@ -62,7 +62,6 @@ body {
   background: var(--bg-color);
 
   &.maxHeight {
-    height: 100vh;
     overflow: hidden;
   }
 }
